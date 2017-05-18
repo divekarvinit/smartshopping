@@ -22,7 +22,7 @@ var totalCartValue = 0;
 var app = {
     // Application Constructor
     initialize: function() {
-        $( ".alertpara" ).after( "<b>Min Event Initialised</b>" );
+        // $( ".alertpara" ).after( "<b>Min Event Initialised</b>" );
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -32,19 +32,20 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        $( ".alertpara" ).after( "<b>On ready Called</b>" );
+        // $( ".alertpara" ).after( "<b>On ready Called</b>" );
         // bluetoothSerial.connect(macAddress, app.onConnect, app.onDisconnect);
         nfc.addNdefListener(app.onNfc, app.success, app.failure);
         nfc.addTagDiscoveredListener(app.onNfc);
     },
 
     onNfc : function(nfcEvent){
-            alert(JSON.stringify(nfcEvent.tag));
-            para.innerHTML="NFC Data Found" + JSON.stringify(nfcEvent.tag);
+           // alert(JSON.stringify(nfcEvent.tag));
+            updateCartItems(nfcEvent.tag);
+            populateCart();
     },
 
     success : function(){
-        alert("Success NFC");
+       // alert("Success NFC");
     },
 
     failure : function(){
@@ -53,7 +54,7 @@ var app = {
 
     onConnect: function() {
         bluetoothSerial.subscribe("\n", app.onMessage, app.subscribeFailed);
-        $( ".alertpara" ).after( "<b>Connected to a device</b>" );
+        //$( ".alertpara" ).after( "<b>Connected to a device</b>" );
        message.innerHTML="Connected to " + macAddress + ".";        
     },
     onDisconnect: function() {
@@ -63,12 +64,12 @@ var app = {
     },
     onMessage: function(data) {
         alert('Received' + data);
-        $( ".alertpara" ).after( "<b>Message Received: </b>" + "<b>" + data + "</b>" );
+        //$( ".alertpara" ).after( "<b>Message Received: </b>" + "<b>" + data + "</b>" );
         message.innerHTML = data;
     },
 
     subscribeFailed: function() {
-        $( ".alertpara" ).after( "<b>Subscribe Failed</b>" );
+        // $( ".alertpara" ).after( "<b>Subscribe Failed</b>" );
         alert("subscribe failed");
     },
     // Update DOM on a Received Event

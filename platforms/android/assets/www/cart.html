@@ -9,9 +9,15 @@
 <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.css">
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" href="#">Prototype</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -19,6 +25,8 @@
             <li><a href="#">Checklist</a></li>
             <li><a href="./cart.html" class="active">Cart</a></li>
             <li><a href="#">About</a></li>
+            <li><a href="./index.html">Logout</a></li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -49,7 +57,7 @@
 			</div>
 		</div>
 		<hr> -->
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-2 col-xs-3">
 				<img class="img-thumbnail" src="./lays.jpg">
 			</div>
@@ -62,7 +70,7 @@
 				<p><span><b>Description:</b><span>Pack of Lay's</span></span></p>
 			</div>
 		</div>
-		<hr>
+		<hr> -->
 		
 		<div class="alertpara" id="message" style="font-size: 24px;">....</div>
 	</div>
@@ -73,6 +81,7 @@
 <script type="text/javascript">
 </script>
 <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src= "./js/bootstrap.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript">
 </script>
@@ -80,7 +89,6 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
 </script>
-<script type="text/javascript" src= "./js/bootstrap.js"></script>
 <script type="text/javascript">
 	/* $(document).ready(function(){
 		$.get("http://localhost:8080/getHelloWorld", function(data, status){
