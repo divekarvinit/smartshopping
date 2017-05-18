@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+<title>Intelligent Shopping</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.css">
+</head>
+<body>
+	<div class="container">
+		<!-- <div class="row" style ="padding-top:5px;">
+			<div class="col-md-offset-1 col-md-10">
+				<table class="table table-striped">
+					<tr id = "table-headers">
+					  <th class="active">#</th>
+					  <th class="active">Name</th>
+					  <th class="active">Description</th>
+					  <th class="active">Grade</th>
+					  <th class="active">Remarks</th>
+					</tr>
+				</table>
+			</div>
+		</div> -->
+		<div class="row">
+			<div class="col-xs-2">
+				<img class="img-thumbnail" src="./lays.jpg">
+			</div>
+		  	<div class="col-xs-5">
+		  		<p><span><b>Product Name: </b><span>Lays</span></span></p>
+				<p><span><b>Description:</b><span>Pack of Lay's</span></span></p>
+		  	</div>
+	  		<div class="col-xs-5">
+	  			<p><span><b>Product Name: </b><span>Lays</span></span></p>
+				<p><span><b>Description:</b><span>Pack of Lay's</span></span></p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-xs-2">
+				<img class="img-thumbnail" src="./lays.jpg">
+			</div>
+		  	<div class="col-xs-5">
+		  		<p><span><b>Product Name: </b><span>Lays</span></span></p>
+				<p><span><b>Description:</b><span>Pack of Lay's</span></span></p>
+		  	</div>
+	  		<div class="col-xs-5">
+	  			<p><span><b>Product Name: </b><span>Lays</span></span></p>
+				<p><span><b>Description:</b><span>Pack of Lay's</span></span></p>
+			</div>
+		</div>
+		<hr>
+		<div class="alertpara" id="message" style="font-size: 24px;">....</div>
+	</div>
+</body>
+<script type="text/javascript">
+	
+	alert('Loading JS pages');
+</script>
+<script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript">
+	
+	alert('Loaded Cordova.js pages anad loading index.js');
+</script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+	
+	alert('Loaded index.js');
+</script>
+<script type="text/javascript" src= "./js/bootstrap.js"></script>
+<script type="text/javascript">
+	/* $(document).ready(function(){
+		$.get("http://localhost:8080/getHelloWorld", function(data, status){
+			var obj = jQuery.parseJSON(data);	
+			console.log(obj.list[0].main.sea_level);
+			$("#table-headers").after("<p>" + obj.list[0].main.sea_level + "</p>"); 
+			console.log(data);
+		});
+	}); */
+	/* $(document).ready(function(){
+		$.ajax({
+			url:'http://localhost:8080/getHelloWorld',
+			method:'GET',
+			crossDomain:true,
+			accepts:'application/json',
+			success: function(data){
+				console.log(data);
+			}
+		});
+	}); */
+/* 	(function() {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				console.log(xmlhttp.responseText); 
+				document.getElementById("insertHere").innerHTML = xmlhttp.responseText;
+				return xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET", "http://localhost:8080/getHelloWorld", true);
+		xmlhttp.send(null);
+	})();
+ */
+</script>
+</html>
