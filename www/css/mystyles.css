@@ -89,3 +89,24 @@ address {
   position: absolute;
   right: 0px;
 }
+.footerCls{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin:0px;
+  background-color: #efefef;
+  overflow-x: hidden;
+}
+
+.totalcartvalue{
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 15px;
+  text-align: right;
+}
+.cartvalue {
+  
+}

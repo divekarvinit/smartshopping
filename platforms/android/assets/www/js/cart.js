@@ -1,5 +1,6 @@
 var products = [{"id":[-37,-84,-37,59],"img":"./img/nut_bar.jpg","productName":"Nice & Natural Nut Bars","unit":"1","price":"3"},{"id":[-37,-107,41,-47],"img":"./img/spiral_notebook.jpg","productName":"Spiral Notebook","unit":"1","price":"4"}];
 var cartItems = [];
+var totalCartValue = parseInt(0);
 
 $( document ).ready(function() {
     populateCart();
@@ -18,6 +19,7 @@ function updateCartItems(rfidData){
 		if(cartItems[i].id != 'undefined' && cartItems[i].id != null) {
 			var productId = cartItems[i].id;
 			if(rfId[0] == productId[0] && rfId[1] == productId[1] && rfId[2] == productId[2] && rfId[3] == productId[3]) {
+				totalCartValue = parseInt(totalCartValue) - parseInt(cartItems[i].price);
 				cartItems.splice(i, 1);
 				isRemoved = true;
 				break;
@@ -34,6 +36,7 @@ function updateCartItems(rfidData){
 				var productId = products[i].id;
 				if(rfId[0] == productId[0] && rfId[1] == productId[1] && rfId[2] == productId[2] && rfId[3] == productId[3]) {
 					cartItems.push(products[i]);
+					totalCartValue = parseInt(totalCartValue) + parseInt(products[i].price);
 					break;
 				}
 			}
@@ -44,6 +47,8 @@ function updateCartItems(rfidData){
 function populateCart() {
 	//alert("Populated");
 	$(".bodyclass").html('');
+	$(".cartvalue").html('');
+	$(".cartvalue").html("$ " + totalCartValue);
 	for(var i = 0; i < cartItems.length; i++){
 		debugger;
 		$(".bodyclass").append(
