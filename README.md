@@ -1,6 +1,6 @@
 # smartshopping
 
-This is an Apache Cordova framework developed mobile application. The platform for which it is developed is Android.
+This is an Apache Cordova framework developed mobile application.
 Files related to programming are path '/www/'.
 APK file is at following location '/platforms/android/build/outputs/apk/'
 
